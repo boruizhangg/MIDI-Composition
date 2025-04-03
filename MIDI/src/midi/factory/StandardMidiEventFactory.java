@@ -4,6 +4,10 @@ import javax.sound.midi.InvalidMidiDataException;
 import javax.sound.midi.MidiEvent;
 import javax.sound.midi.ShortMessage;
 
+/**
+ * Standard implementation of MidiEventFactory
+ * Creates standard MIDI events without any modification to timing
+ */
 public class StandardMidiEventFactory implements MidiEventFactory{
 	
 	@Override
