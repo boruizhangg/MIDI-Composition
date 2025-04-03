@@ -4,6 +4,10 @@ import javax.sound.midi.InvalidMidiDataException;
 import javax.sound.midi.MidiEvent;
 import javax.sound.midi.ShortMessage;
 
+/**
+ * Staccato implementation of MidiEventFactory
+ * Creates MIDI events with shorter durations for more detached notes
+ */
 public class StaccatoMidiEventFactory implements MidiEventFactory{
 	
 	@Override
