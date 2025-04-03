@@ -4,6 +4,10 @@ import javax.sound.midi.InvalidMidiDataException;
 import javax.sound.midi.MidiEvent;
 import javax.sound.midi.ShortMessage;
 
+/**
+ * Legato implementation of MidiEventFactroy
+ * Creates MIDI events with longer durations for smoother and connected notes
+ */
 public class LegatoMidiEventFactory implements MidiEventFactory{
 	
 	@Override
