@@ -1,5 +1,7 @@
 package midi.factory;
 
-public class MidiEventFactoryAbstract {
+public interface MidiEventFactoryAbstract {
+	
+	MidiEventFactory createFactory();
 
 }
