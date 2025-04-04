@@ -5,7 +5,7 @@ import javax.sound.midi.MidiEvent;
 import javax.sound.midi.ShortMessage;
 import javax.sound.midi.Track;
 
-public class AcousticGrandPianoStrategy {
+public class AcousticGrandPianoStrategy implements InstrumentStrategy{
 private static final int ACOUSTIC_GRAND_PIANO = 0;
 	@Override
 	public void applyInstrument(Track track, int channel) 
