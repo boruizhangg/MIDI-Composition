@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>files/mystery_song.csv</name>
-			<type>1</type>
-			<location>C:/Users/Borui/Downloads/mystery_song.csv</location>
-		</link>
-	</linkedResources>
 </projectDescription>
