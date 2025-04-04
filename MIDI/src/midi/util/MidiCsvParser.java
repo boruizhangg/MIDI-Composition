@@ -9,9 +9,15 @@ import midi.model.MidiEventData;
 import java.io.IOException;
 
 
-
+//I am making the assumption that the format of csv files to parse are following the conventions of the initial file provided
+//so that means they are separated with commas, have 6 items per line and all data is populated. 
 public class MidiCsvParser {
 	
+	/**parses the csv file and gets the data and put them in the list of MidiEventData objs. 
+	 * @param path of the csv file, needs to be leading with // ! 
+	 * @return the list containing the midi events 
+	 * @throws IOException 
+	 */
 	public static List<MidiEventData> parseCsv(String path) throws IOException
 	{
 		List<MidiEventData> midiEvents = new ArrayList<MidiEventData>();
@@ -24,6 +30,7 @@ public class MidiCsvParser {
 				
 				int noteOnOff;
 				int startEndTick = grabData(data[0]);
+				//random space in the file so thats why trim
 				String onOff = data[1].trim();
 				int channel = grabData(data[2]);
 				int note = grabData(data[3]);
@@ -49,6 +56,10 @@ public class MidiCsvParser {
 		return midiEvents;
 }
 
+	/**this is very stupid and inefficient but gets the job done. Turns the string to ints
+	 * @param str is going to be converted to an int
+	 * @return the int value
+	 */
 	private static int grabData(String str)
 	{
 		Scanner scanner = new Scanner(str.trim());
