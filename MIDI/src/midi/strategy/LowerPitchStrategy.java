@@ -1,10 +1,10 @@
 package midi.strategy;
 
 public class LowerPitchStrategy {
-//adding 2 more note 
+//two more less note for lower pitch
 @Override
 	public int modifyPitch(int note) 
 	{
-		return note + 2;
+		return note - 2;
 	}
 }
