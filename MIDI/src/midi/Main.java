@@ -1,31 +1,24 @@
 package midi;
 
 import java.util.List;
+import javax.sound.midi.*;
 
-import javax.sound.midi.MidiSystem;
-import javax.sound.midi.Sequence;
-import javax.sound.midi.Sequencer;
-import javax.sound.midi.ShortMessage;
-import javax.sound.midi.Track;
 
-import midi.factory.LegatoMidiEventFactoryAbstract;
-import midi.factory.MidiEventFactory;
-import midi.factory.MidiEventFactoryAbstract;
-import midi.factory.StaccatoMidiEventFactoryAbstract;
-import midi.factory.StandardMidiEventFactoryAbstract;
+import midi.factory.*;
 import midi.model.MidiEventData;
 import midi.util.MidiCsvParser;
-
+import midi.strategy.*;
 public class Main {
 
+	public static void main(String[] args) {
 	 try {
             List<MidiEventData> midiEvents = MidiCsvParser.parseCsv("./files/mystery_song.csv");
             Sequence sequence = new Sequence(Sequence.PPQ, 384);
             Track track = sequence.createTrack();
 
             MidiEventFactoryAbstract factoryAbstract = new StandardMidiEventFactoryAbstract();
-            MidiEventFactoryAbstract factoryAbstract = new LegatoMidiEventFactoryAbstract();
-            MidiEventFactoryAbstract factoryAbstract = new StaccatoMidiEventFactoryAbstract();
+           // MidiEventFactoryAbstract factoryAbstract = new LegatoMidiEventFactoryAbstract();
+           // MidiEventFactoryAbstract factoryAbstract = new StaccatoMidiEventFactoryAbstract();
 
             MidiEventFactory factory = factoryAbstract.createFactory();
 
