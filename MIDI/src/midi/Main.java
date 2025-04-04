@@ -1,5 +1,21 @@
 package midi;
 
+import java.util.List;
+
+import javax.sound.midi.MidiSystem;
+import javax.sound.midi.Sequence;
+import javax.sound.midi.Sequencer;
+import javax.sound.midi.ShortMessage;
+import javax.sound.midi.Track;
+
+import midi.factory.LegatoMidiEventFactoryAbstract;
+import midi.factory.MidiEventFactory;
+import midi.factory.MidiEventFactoryAbstract;
+import midi.factory.StaccatoMidiEventFactoryAbstract;
+import midi.factory.StandardMidiEventFactoryAbstract;
+import midi.model.MidiEventData;
+import midi.util.MidiCsvParser;
+
 public class Main {
 
 	 try {
