@@ -3,7 +3,7 @@ package midi.factory;
 /**
  * Abstract factory for creating LegatoMidiEventFactory instances
  */
-public class LegatoMidiEventAbstract implements MidiEventFactoryAbstract{
+public class LegatoMidiEventFactoryAbstract implements MidiEventFactoryAbstract{
 	
 	@Override
 	public MidiEventFactory createFactory() {
